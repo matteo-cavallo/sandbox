@@ -1,7 +1,7 @@
 <p>
   A digital publication that...
   <br />
-  <strong></strong>
+  <strong class="animate"></strong>
 </p>
 
 <script>
@@ -13,26 +13,30 @@
   ];
 
   let index = 0;
-  const textElement = document.querySelector("strong")!;
+  const textElement = document.querySelector(".animate")!;
   textElement.textContent = texts[index];
 
   textElement.addEventListener("animationiteration", () => {
     index = (index + 1) % texts.length;
     textElement.textContent = texts[index];
-    console.log(index);
   });
 </script>
 
 <style>
-  strong {
+  .animate {
     position: absolute;
-    animation-name: animation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    /**
+     * CSS animation property that creates a sliding effect
+     * - Duration: 5 seconds
+     * - Animation name: slide-in
+     * - Delay: 5 seconds
+     * - Iteration: infinite
+     * - Timing function: ease-in-out
+     */
+    animation: 5s slide-in 5s infinite ease-in-out;
   }
 
-  @keyframes animation {
+  @keyframes slide-in {
     0% {
       transform: translateY(30px);
       opacity: 0;
