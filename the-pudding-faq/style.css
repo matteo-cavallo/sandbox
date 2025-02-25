@@ -1,0 +1,20 @@
+details {
+  border-bottom: 1px solid;
+}
+
+details > div {
+  padding: 1rem;
+}
+
+summary {
+  padding: 1rem 0;
+  transition: transform 0.2s ease-out;
+}
+
+summary:hover {
+  transform: translateX(4px);
+}
+
+summary:hover {
+  cursor: pointer;
+}
