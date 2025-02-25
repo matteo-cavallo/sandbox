@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Pudding - Text Animation</title>
+    <style>
+      .animate {
+        position: absolute;
+        animation: 5s slide-in 5s infinite ease-in-out;
+      }
+
+      @keyframes slide-in {
+        0% {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script src="./script.ts"></script>
+  </head>
+  <body>
+    <p>
+      A digital publication that...
+      <br />
+      <strong class="animate"></strong>
+    </p>
+  </body>
+</html>
